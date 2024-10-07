@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage"
+             Title="">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Margin="0,50,0,0"
+            Spacing="25">
+            <Image
+                Source="piggy.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="pink piggy bank" />
+
+            <!-- Kast rahasumma kuvamiseks -->
+            <Frame
+                x:Name="MoneyFrame"
+                BackgroundColor="LightGray"
+                BorderColor="Black"
+                CornerRadius="10"
+                Padding="20"
+                HorizontalOptions="Fill">
+                <Label
+                    x:Name="MoneyLabel"
+                    Text="Klassi raha kokku: 0"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="36"
+                    HorizontalTextAlignment="Center"  
+                    VerticalTextAlignment="Center" />
+                    
+            </Frame>
+
+            <Button
+                x:Name="StudentsBtn"
+                Text="Õpilased" 
+                Clicked="OnStudentsClicked"
+                HorizontalOptions="Fill"
+                Style="{StaticResource ButtonStyle}"/>
+
+            <Button
+                 x:Name="EventsBtn"
+                 Text="Üritused" 
+                 Clicked="OnEventsClicked"
+                 HorizontalOptions="Fill"
+                 Style="{StaticResource ButtonStyle}"/>
+
+        </VerticalStackLayout>
+        
+    </ScrollView>
+
+</ContentPage>
